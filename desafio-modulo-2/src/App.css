@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-areas: 
+    "header header header header header"
+    "main aside aside aside aside ";
+}
+
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-areas: "logo input favoritos promocoes profile";
+  grid-gap: 18px;
+  background-color: #0F1C26;
+  height: 104px;
+}
+
+.logo {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-area: logo;
+  margin-left: 80px;
+}
+
+.input {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-area: input;
+}
+
+.input input {
+  all: unset;
+  position: relative;
+  z-index: 1;
+  padding-left: 15px;
+  width: 456px;
+  height: 56px;
+  background-color: #171B1E;
+  color: #FDFDFD;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.input input:hover {
+  background: #0B1217;
+  border: 1px solid #8C8C8C;
+}
+
+.input input:focus {
+  background: #0B1217;
+  border: 1px solid #8C8C8C;
+}
+
+.input button {
+  all: unset;
+  position: relative;
+  z-index: 2;
+  right: 40px;
+  cursor: pointer;
+}
+
+.favoritos {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-area: favoritos;
+}
+
+.favoritos h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+.favoritos img {
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.promocoes {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-area: promocoes;
+}
+
+.promocoes h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+.promocoes img {
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.profile {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-area: profile;
+}
+
+.profile h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+}
+
+.profile img {
+  vertical-align: middle;
+  padding-left: 5px;
+  width: 54px;
+  height: 54px;
+}
+
+
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: "filmes";
+  grid-template-rows: 100%;
+  background-color: #1D2226;
+}
+
+main h2 {
+  position: relative;
+  left: 5px;
+  color: #FDFDFD;
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.top-filmes {
+  grid-area: filmes;
+  display: grid;
+  margin-top: 40px;
+}
+
+.top-filmes ul {
+  grid-area: top-filmes;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.background-filme {
+  width: 168px;
+  height: 301px;
+}
+
+.top-filmes li {
+  display: grid;
+  justify-content: center;
+  list-style: none;
+}
+
+.titulo-top-filmes {
+  position: relative;
+  bottom: 55px; 
+  color: white;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.icone-estrela {
+  position: relative;
+  left: 130px;
+  bottom: 72px;
+}
+
+.pontuacao {
+  position: relative;
+  left: 145px;
+  bottom: 87px;
+  color: #FBCD6E;
+}
+
+.container-filmes {
+  margin-top: -60px;
+}
+
+.filmes ul {
+  grid-area: top-filmes;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.filmes li {
+  display: grid;
+  justify-content: center;
+  list-style: none;
+}
+
+.filtros {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.botoes-filtros {
+  all: unset;
+  cursor: pointer;
+  display: grid;
+  align-content: center; 
+  box-sizing: border-box; 
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 168px;
+  height: 38px;
+  border: 2px solid #ffffff3b;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff3b;
+}
+
+#botoes-filtros-selecionado {
+  background: rgba(225, 131, 200, 0.2);
+  border: 2px solid #E183C8;
+  color: #E183C8;
+}
+
+.botoes-filtros:hover {
+  border: 2px solid #E183C8;
+  box-sizing: border-box;
+  color: #E183C8;
+}
+
+.botao-sacola {
+  all: unset;
+  cursor: pointer;
+  position: relative;
+  bottom: 85px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  width: 152px;
+  height: 26px;
+  background: #A785ED;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  color: #EEE6FF;
+}
+
+.botao-sacola:hover {
+  background: linear-gradient(0deg, rgba(46, 46, 46, 0.45), rgba(46, 46, 46, 0.45)), #A785ED;
+}
+
+.botao-sacola span {
+  position: relative;
+  left: 50px;
+}
+
+
+aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-areas: "container-sacola";
+}
+
+.container-sacola {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 40px;
+  width: 312px;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+}
+
+.sacola {
+  display: grid;
+}
+
+.titulo-sacola {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid linear-gradient(0deg, #A785ED, #A785ED), #C4C4C4;
+  background: linear-gradient(0deg, #A785ED, #A785ED), #C4C4C4;
+  height: 72px;
+}
+
+.titulo-sacola h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: #FDFDFD;
+}
+
+.titulo-sacola img {
+  vertical-align: middle;
+}
+
+.sacola-vazia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.sacola-vazia h3 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  color: #FDFDFD;
+}
+
+.sacola-vazia h4 {
+  padding-top: 5px;
+  padding-bottom: 15px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  color: #FDFDFD;
+}
+
+.sacola-cupom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sacola-cupom label {
+  position: relative;
+  right: 92px;
+  font-size: 12px;
+  font-family: 'Manrope', sans-serif;
+  color: #FDFDFD;
+}
+
+.sacola-cupom input {
+  background: #0B1217;
+  padding-left: 10px;
+  width: 280px;
+  height: 40px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  color: #FDFDFD;
+}
+
+.sacola-cupom img {
+  position: relative;
+  left: 120px;
+  bottom: 30px;
+  width: 14,23px;
+  height: 13,33px;
+}
